@@ -4,8 +4,6 @@ import { OrbitControls } from '@react-three/drei'; // Correct import from @react
 import { Model } from './Model.jsx'; // Your model import
 import { BoxGeometry } from 'three';
 import { MathUtils } from 'three'
-import { Stars, Html } from '@react-three/drei'
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
 function App() {
   return (
     <Canvas style={{ width: '100vw', height: '100vh', background: 'radial-gradient(circle, #1a1a1a, #000000)' }} camera={{ fov: 50, position: [0, 2, 6] }}>
