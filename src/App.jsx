@@ -2,20 +2,23 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei'; // Correct import from @react-three/drei
 import { Model } from './Model.jsx'; // Your model import
-
+import { BoxGeometry } from 'three';
+import { MathUtils } from 'three'
+import { Stars, Html } from '@react-three/drei'
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 function App() {
   return (
     <Canvas style={{ width: '100vw', height: '100vh', background: 'radial-gradient(circle, #1a1a1a, #000000)' }} camera={{ fov: 50, position: [0, 2, 6] }}>
-      
-      {/* Studio-like lighting with your specified positions */}
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[-5.7, -10, 0.5]} intensity={7} />
-      <directionalLight position={[-1.3, 4.8, 0.8]} intensity={7} />
-      <spotLight position={[-6.5, 5.5, -5.9]} angle={2.15} penumbra={1} intensity={0.7} />
-      <directionalLight position={[0, -6.4, 0]} intensity={2} />
-
+      <ambientLight intensity={1.2} />
+      <spotLight position={[0, 0, 2]} intensity={1.2} />
+      {/*
+      <mesh position={[0, 0, 0]} scale={0.4}>
+      <sphereGeometry args={[0.1, 16, 16]} />
+      <meshBasicMaterial color="hotpink" />
+      </mesh>
+       */}
       {/* Your 3D Model */}
-      <Model position={[0.7, -0.4, 0.5]} scale={0.4} rotation={[Math.PI / 120, 20.4, 0]} />
+      <Model position={[0, -0.15, 0.07]} scale={0.4} rotation={[MathUtils.degToRad(180), (1.6), (0)]}/>
 
       {/* OrbitControls to allow full 360-degree rotation around the model */}
       <OrbitControls 
@@ -28,7 +31,9 @@ function App() {
         maxAzimuthAngle={Infinity} // No limit on horizontal rotation (left/right)
         minAzimuthAngle={-Infinity} // No limit on horizontal rotation (left/right)
       />
+
     </Canvas>
+    
   );
 }
 
