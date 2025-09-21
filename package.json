@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d build -r https://github.com/fotisftma/ftmayarn.github.io"
   },
-  "homepage": "https://ftmadesigns.com/ftmayarn/",
+  "homepage": "https://ftmadesigns.com/",
   "dependencies": {
     "@react-three/drei": "^9.114.0",
     "@react-three/fiber": "^8.17.9",
