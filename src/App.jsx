@@ -31,7 +31,6 @@ function App() {
         maxAzimuthAngle={Infinity} // No limit on horizontal rotation (left/right)
         minAzimuthAngle={-Infinity} // No limit on horizontal rotation (left/right)
       />
-
     </Canvas>
     
   );
