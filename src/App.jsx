@@ -2,7 +2,6 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei'; // Correct import from @react-three/drei
 import { Model } from './Model.jsx'; // Your model import
-import { BoxGeometry } from 'three';
 import { MathUtils } from 'three'
 
 function App() {
