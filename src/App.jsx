@@ -4,17 +4,18 @@ import { OrbitControls } from '@react-three/drei'; // Correct import from @react
 import { Model } from './Model.jsx'; // Your model import
 import { BoxGeometry } from 'three';
 import { MathUtils } from 'three'
+
 function App() {
   return (
     <Canvas style={{ width: '100vw', height: '100vh', background: 'radial-gradient(circle, #1a1a1a, #000000)' }} camera={{ fov: 50, position: [0, 2, 6] }}>
       <ambientLight intensity={1.2} />
       <spotLight position={[0, 0, 2]} intensity={1.2} />
-      {/*
       <mesh position={[0, 0, 0]} scale={0.4}>
       <sphereGeometry args={[0.1, 16, 16]} />
       <meshBasicMaterial color="hotpink" />
       </mesh>
-       */}
+      
+
       {/* Your 3D Model */}
       <Model position={[0, -0.15, 0.07]} scale={0.4} rotation={[MathUtils.degToRad(180), (1.6), (0)]}/>
 
@@ -30,7 +31,6 @@ function App() {
         minAzimuthAngle={-Infinity} // No limit on horizontal rotation (left/right)
       />
     </Canvas>
-    
   );
 }
 
