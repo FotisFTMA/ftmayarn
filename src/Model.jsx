@@ -4,8 +4,8 @@ Command: npx gltfjsx@6.5.2 .\model.gltf --transform
 Files: .\model.gltf [5.59KB] > C:\Users\FTMA\Desktop\xanaxProject\XANAXSITE\src\assets\model-transformed.glb [95.17KB] (-1603%)
 */
 
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import React from 'react';
+import { useGLTF } from '@react-three/drei';
 
 export function Model(props) {
   const { nodes, materials } = useGLTF('./renderrr.glb')
